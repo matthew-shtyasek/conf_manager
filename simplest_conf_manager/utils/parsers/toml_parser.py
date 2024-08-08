@@ -2,7 +2,7 @@ from typing import override
 
 import toml
 
-from conf_manager.utils.parsers.base_parser import BaseParser
+from simplest_conf_manager.utils.parsers.base_parser import BaseParser
 
 
 class TomlParser(BaseParser):

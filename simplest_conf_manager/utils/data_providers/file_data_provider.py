@@ -1,4 +1,4 @@
-from conf_manager.utils.data_providers.base_data_provider import BaseDataProvider
+from simplest_conf_manager.utils.data_providers.base_data_provider import BaseDataProvider
 
 
 class FileDataProvider(BaseDataProvider):
@@ -6,6 +6,8 @@ class FileDataProvider(BaseDataProvider):
         self.path = path
         self.modifier = modifier
         self.encoding = encoding
+
+        super().__init__()
 
     def get_data(self) -> str:
         with open(self.path, self.modifier, encoding=self.encoding) as f:

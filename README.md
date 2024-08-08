@@ -9,9 +9,11 @@
 <p style="font-size:14pt">Создание конфигурации</p>
 
 ```python
-from conf_manager.base_config import BaseConfig
-from *.brokers.broker_config import BrokerConfig
-from *.databases import Databases
+from simplest_conf_manager.base_config import BaseConfig
+from *.brokers.broker_config
+import BrokerConfig
+from *.databases
+import Databases
 
 
 class Config(BaseConfig):
@@ -64,10 +66,10 @@ password="pwd"
 config.py
 
 ```python
-from conf_manager.utils.data_providers.file_data_provider import FileDataProvider
-from conf_manager.utils.parsers.toml_parser import TomlParser
-from conf_manager.utils.dictionaries.deep_merge import deep_merge
-from conf_manager import BaseConfig
+from simplest_conf_manager.utils.data_providers.file_data_provider import FileDataProvider
+from simplest_conf_manager.utils.parsers.toml_parser import TomlParser
+from simplest_conf_manager.utils.dictionaries.deep_merge import deep_merge
+from simplest_conf_manager import BaseConfig
 from pydantic import BaseModel
 
 
@@ -77,7 +79,7 @@ class Connection(BaseModel):
     username: str
     password: str
 
-    
+
 class Config(BaseConfig):
     connection: Connection
 

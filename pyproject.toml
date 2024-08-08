@@ -1,14 +1,15 @@
 [tool.poetry]
-name = "conf-manager"
-version = "0.1.0"
+name = "simplest-conf-manager"
+version = "0.1.2"
 description = ""
-authors = ["Matthew <matthewgiovannini@mail.ru>"]
+authors = ["matthew-shtyasek <shtyasek2003@mail.ru>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
 toml = "^0.10.2"
 pydantic = "^2.8.2"
+setuptools = "^70.3.0"
 
 
 [build-system]

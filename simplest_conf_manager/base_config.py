@@ -3,8 +3,8 @@ from functools import reduce
 
 from pydantic import BaseModel
 
-from conf_manager.utils.dictionaries.deep_merge import deep_merge
-from conf_manager.utils.parsers.base_parser import BaseParser
+from simplest_conf_manager.utils.dictionaries.deep_merge import deep_merge
+from simplest_conf_manager.utils.parsers.base_parser import BaseParser
 
 
 class BaseConfig(BaseModel, ABC):
