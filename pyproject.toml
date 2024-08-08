@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "simplest-conf-manager"
-version = "0.1.2"
+version = "0.1.2.1"
 description = ""
 authors = ["matthew-shtyasek <shtyasek2003@mail.ru>"]
 readme = "README.md"

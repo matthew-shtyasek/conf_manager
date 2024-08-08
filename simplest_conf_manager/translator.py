@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-from base_strings import BaseStrings
+from simplest_conf_manager import BaseStrings
 
 
 class Translator(BaseModel):

@@ -100,6 +100,39 @@ config = Config(**deep_merge(conf_parser.parse(), secret_parser.parse()))
 <p>Здесь следует обратить внимание на то, что при наличии одинаковых ключей в нескольких словарях (при использовании функции deep_merge) значение будет взято из последнего.</p>
 
 
+<p>Данную библиотеку можно использовать для перевода на разные языки небольших приложений:</p>
+
+```python
+from pydantic import BaseModel
+
+from simplest_conf_manager import BaseStrings, Translator
+from simplest_conf_manager.utils.data_providers import FolderDataProvider
+from simplest_conf_manager.utils.parsers import TomlParser
+
+
+class Phrases(BaseModel):
+    hi: str
+    how_are_you: str
+
+
+class Strings(BaseStrings):
+    langs: dict[str, Phrases]
+
+
+strings_path = 'tests/test_proj/config/strings'
+
+strings_provider = FolderDataProvider(path=strings_path)
+
+strings_parser = TomlParser(strings_provider)
+
+strings = Strings(**{'langs': strings_parser.parse()})
+
+translator = Translator(strings=strings, lang='ru')
+
+print(translator.hi)
+
+```
+
 <style>
 p {
     font-size: 14pt;
